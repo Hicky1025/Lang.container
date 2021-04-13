@@ -8,7 +8,8 @@ ENV PATH /usr/local/bin:$PATH
 ENV LANG C.UTF-8
 
 # extra dependencies (over what buildpack-deps already includes)
-RUN apt-get update && apt-get install -y --no-install-recommends libbluetooth-dev tk-dev uuid-dev git curl wget less vim iputils-ping net-tools \
+RUN apt-get update \
+	&& apt-get install -y --no-install-recommends libbluetooth-dev tk-dev uuid-dev git curl wget less vim iputils-ping net-tools \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV GPG_KEY A035C8C19219BA821ECEA86B64E628F8D684696D
