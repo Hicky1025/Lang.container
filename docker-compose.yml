@@ -1,0 +1,19 @@
+version: '3.8'
+
+services: 
+    py.container:
+        build: ./build/python
+        restart: always
+        container_name: py.container
+        volumes: 
+            - ../lang/python:/lang
+        tty: true
+        network_mode: host
+    go.container:
+        build: ./build/go
+        restart: always
+        container_name: go.container
+        volumes: 
+            - ../lang/go:/lang
+        tty: true
+        network_mode: host
