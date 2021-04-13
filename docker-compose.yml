@@ -6,7 +6,7 @@ services:
         restart: always
         container_name: py.container
         volumes: 
-            - ../lang/python:/lang
+            - ../../lang/python:/lang
         tty: true
         network_mode: host
     go.container:
@@ -14,6 +14,6 @@ services:
         restart: always
         container_name: go.container
         volumes: 
-            - ../lang/go:/lang
+            - ../../lang/go:/lang
         tty: true
         network_mode: host
